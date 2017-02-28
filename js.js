@@ -3,8 +3,10 @@
 // document.getElementsByTagName('p')[0].style.color = 'yellow'
 // document.getElementById("myHeading").style.backgroundColor = 'tomato'
 
+const myButton = document.getElementById('myButton');
 const myHeading = document.getElementById('myHeading');
+const myTextInput = document.getElementById('myTextInput');
 
-myHeading.addEventListener('click', () => {
-	myHeading.style.color = 'red';
+myButton.addEventListener('click', () => {
+	myHeading.style.color = myTextInput.value;
 });
