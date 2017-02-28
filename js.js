@@ -39,8 +39,15 @@ purpleButton.addEventListener('click', () => {
 })
 
 
+// ***************************************
+     // SELECT ELEMTENTS BY CLASS NAME
+// ****************************************
 
+const notPurple = document.getElementsByClassName('not-purple');
 
+for (i=0; i < notPurple.length; i++) {
+	notPurple[i].style.color = 'black';
+}
 
 
 
