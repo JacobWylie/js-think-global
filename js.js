@@ -6,7 +6,12 @@
 const myButton = document.getElementById('myButton');
 const myHeading = document.getElementById('myHeading');
 const myTextInput = document.getElementById('myTextInput');
+const btob = document.getElementById('btob');
 
 myButton.addEventListener('click', () => {
 	myHeading.style.color = myTextInput.value;
 });
+
+btob.addEventListener('click', () => {
+	myHeading.style.color = "black";
+})
