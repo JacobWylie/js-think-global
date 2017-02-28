@@ -28,11 +28,15 @@ btob.addEventListener('click', () => {
 // ****************************************
 
 const myList = document.getElementsByTagName('li');
+const purpleButton = document.getElementById('purpleButton');
 
 for (i=0; i < myList.length; i++) {
 	myList[i].style.color = 'purple';
 }
 
+purpleButton.addEventListener('click', () => {
+	purpleButton.style.backgroundColor = 'purple';
+})
 
 
 
