@@ -43,15 +43,26 @@ purpleButton.addEventListener('click', () => {
      // SELECT ELEMTENTS BY CLASS NAME
 // ****************************************
 
-const notPurple = document.getElementsByClassName('not-purple');
+// const notPurple = document.getElementsByClassName('not-purple');
 
-for (i=0; i < notPurple.length; i++) {
-	notPurple[i].style.color = 'black';
+// for (i=0; i < notPurple.length; i++) {
+// 	notPurple[i].style.color = 'black';
+// }
+
+
+// ***************************************
+     // Query Selectors
+// ****************************************
+
+// document.querySelectorAll('#notPurple')
+// document.querySelector('h3');
+// document.quesrySelector(['title=label'])
+
+const evens = document.querySelectorAll('li:nth-child(even)');
+for (let i = 0; i < evens.length; i += 1) {
+	evens[i].style.backgroundColor = 'black';
+	evens[i].style.color = 'white';
 }
-
-
-
-
 
 
 
