@@ -126,17 +126,37 @@ removeItemButton.addEventListener ('click', () => {
 // ****************************************
 
 
-const listItems = document.getElementsByTagName('li');
+// const listItems = document.getElementsByTagName('li');
 
-for (let i = 0; i < listItems.length; i += 1) {
-	listItems[i].addEventListener('mouseover', () => {
-		listItems[i].innerHTML = listItems[i].innerHTML.toUpperCase();
-	});
+// for (let i = 0; i < listItems.length; i += 1) {
+// 	listItems[i].addEventListener('mouseover', () => {
+// 		listItems[i].innerHTML = listItems[i].innerHTML.toUpperCase();
+// 	});
 
-	listItems[i].addEventListener('mouseout', () => {
-		listItems[i].innerHTML = listItems[i].innerHTML.toLowerCase();
-	});
-}
+// 	listItems[i].addEventListener('mouseout', () => {
+// 		listItems[i].innerHTML = listItems[i].innerHTML.toLowerCase();
+// 	});
+// }
+
+
+// ***************************************
+     //  Event Bubbling and Delegation
+// ****************************************
+
+
+const list = document.querySelector('.list');
+
+
+list.addEventListener('mouseover', () => {
+	listItems[i].innerHTML = listItems[i].innerHTML.toUpperCase();
+});
+
+list.addEventListener('mouseout', () => {
+	listItems[i].innerHTML = listItems[i].innerHTML.toLowerCase();
+});
+
+
+
 
 
 
