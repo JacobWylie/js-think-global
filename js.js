@@ -71,9 +71,9 @@ for (let i = 0; i < evens.length; i += 1) {
 
 const toggleList = document.getElementById('toggleList')
 const listDiv = document.querySelector('.listDiv');
-const input = document.querySelector('input.description');
-const p = document.querySelector('p.description');
-const button = document.querySelector('button.description');
+const descriptionInput = document.querySelector('input.description');
+const descriptionP = document.querySelector('p.description');
+const descriptionButton = document.querySelector('button.description');
 
 toggleList.addEventListener ('click', () => {
 	if (listDiv.style.display == 'none') {
@@ -85,10 +85,38 @@ toggleList.addEventListener ('click', () => {
 	}
 });
 
-button.addEventListener('click', () => {
+descriptionButton.addEventListener('click', () => {
 	// p.textContent = input.value + ':';
-	p.innerHTML = input.value + ':';
+	descriptionP.innerHTML = descriptionInput.value + ':';
 });
+
+
+// ***************************************
+     // Create New Elements
+// ****************************************
+
+const addItemInput = document.querySelector('input.addItemInput');
+const addItemButton = document.querySelector('button.addItemButton');
+const listTwo = document.getElementById('#list2');
+
+addItemButton.addEventListener ('click', () => {
+	let li = document.createElement('li');
+	li.innerHTML = addItemInput.value;
+});
+	listTwo.innerHTML = li;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
