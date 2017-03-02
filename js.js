@@ -147,13 +147,18 @@ removeItemButton.addEventListener ('click', () => {
 const list = document.querySelector('.list');
 
 
-list.addEventListener('mouseover', () => {
-	listItems[i].innerHTML = listItems[i].innerHTML.toUpperCase();
+list.addEventListener('mouseover', (event) => {
+	if (event.target.tagName == 'LI') {
+		event.target.innerHTML = event.target.innerHTML.toUpperCase();
+	}
 });
 
-list.addEventListener('mouseout', () => {
-	listItems[i].innerHTML = listItems[i].innerHTML.toLowerCase();
+list.addEventListener('mouseout', (event) => {
+	if (event.target.tagName == 'LI') {
+		event.target.innerHTML = event.target.innerHTML.toLowerCase();
+	}
 });
+
 
 
 
