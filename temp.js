@@ -1,9 +1,20 @@
+// **********************************
+// 	Functions as Parameters
+// **********************************
+
+// function exec(func, arg) {
+// 	func(arg);
+// }
+
+// exec((something) => {
+// 	console.log(something);
+// }, 'Hi, yo');
 
 
-function exec(func, arg) {
-	func(arg);
-}
+// **********************************
+// 	Functions as Parameters
+// **********************************
 
-exec((something) => {
+window.setTimeout((something) => {
 	console.log(something);
-}, 'Hi, yo');
+}, 3000, 'Hi, yo');
