@@ -58,15 +58,25 @@ purpleButton.addEventListener('click', () => {
 // document.querySelector('h3');
 // document.quesrySelector(['title=label'])
 
-const evens = document.querySelectorAll('li:nth-child(even)');
+const evens = document.querySelectorAll('#list1 li:nth-child(even)');
 for (let i = 0; i < evens.length; i += 1) {
 	evens[i].style.backgroundColor = 'black';
 	evens[i].style.color = 'white';
 }
 
 
+// ***************************************
+     // textContent
+// ****************************************
 
+const input = document.querySelector('input.description');
+const p = document.querySelector('p.description');
+const button = document.querySelector('button.description');
 
+button.addEventListener('click', () => {
+	// p.textContent = input.value + ':';
+	p.innerHTML = input.value + ':';
+});
 
 
 
