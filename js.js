@@ -102,7 +102,7 @@ const addItemButton = document.querySelector('button.addItemButton');
 addItemButton.addEventListener ('click', () => {
 	let listTwo = document.getElementById('listTwo');
 	let li = document.createElement('li');
-	li.innerHTML = addItemInput.value;
+	li.innerHTML = addItemInput.value + '<button>Remove</button>';
 	listTwo.appendChild(li);
 	addItemInput.value = '';
 });
@@ -161,9 +161,18 @@ list.addEventListener('mouseout', (event) => {
 
 
 
+// ***************************************
+     //  Using parentNode to Traverse the DOM
+// ****************************************
 
 
-
+listTwo.addEventListener('click', (event) => {
+	if (event.target.tagName == 'BUTTON') {
+		let li = event.target.parentNode;
+		let ul = li.parentNode;
+		ul.removeChild(li);
+	}
+});
 
 
 
