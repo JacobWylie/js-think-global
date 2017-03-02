@@ -58,7 +58,7 @@ purpleButton.addEventListener('click', () => {
 // document.querySelector('h3');
 // document.quesrySelector(['title=label'])
 
-const evens = document.querySelectorAll('#list1 li:nth-child(even)');
+const evens = document.querySelectorAll('#listOne li:nth-child(even)');
 for (let i = 0; i < evens.length; i += 1) {
 	evens[i].style.backgroundColor = 'black';
 	evens[i].style.color = 'white';
@@ -88,6 +88,7 @@ toggleList.addEventListener ('click', () => {
 descriptionButton.addEventListener('click', () => {
 	// p.textContent = input.value + ':';
 	descriptionP.innerHTML = descriptionInput.value + ':';
+	descriptionInput.value = '';
 });
 
 
@@ -97,13 +98,14 @@ descriptionButton.addEventListener('click', () => {
 
 const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
-const listTwo = document.getElementById('#list2');
 
 addItemButton.addEventListener ('click', () => {
+	let listTwo = document.getElementById('listTwo');
 	let li = document.createElement('li');
 	li.innerHTML = addItemInput.value;
+	listTwo.appendChild(li);
+	addItemInput.value = '';
 });
-	listTwo.innerHTML = li;
 
 
 
