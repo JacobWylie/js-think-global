@@ -121,7 +121,22 @@ removeItemButton.addEventListener ('click', () => {
 });
 
 
+// ***************************************
+     //  Listening to Events
+// ****************************************
 
+
+const listItems = document.getElementsByTagName('li');
+
+for (let i = 0; i < listItems.length; i += 1) {
+	listItems[i].addEventListener('mouseover', () => {
+		listItems[i].innerHTML = listItems[i].innerHTML.toUpperCase();
+	});
+
+	listItems[i].addEventListener('mouseout', () => {
+		listItems[i].innerHTML = listItems[i].innerHTML.toLowerCase();
+	});
+}
 
 
 

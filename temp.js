@@ -12,9 +12,9 @@
 
 
 // **********************************
-// 	Functions as Parameters
+// 	setTimeout()
 // **********************************
 
-window.setTimeout((something) => {
-	console.log(something);
-}, 3000, 'Hi, yo');
+// window.setTimeout((something) => {
+// 	console.log(something);
+// }, 3000, 'Hi, yo');
