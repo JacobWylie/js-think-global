@@ -93,7 +93,7 @@ descriptionButton.addEventListener('click', () => {
 
 
 // ***************************************
-     // Create New Elements
+     // Create New Elements & Add Nodes to DOM
 // ****************************************
 
 const addItemInput = document.querySelector('input.addItemInput');
@@ -108,9 +108,17 @@ addItemButton.addEventListener ('click', () => {
 });
 
 
+// ***************************************
+     //  Remove Nodes from DOM
+// ****************************************
 
+const removeItemButton = document.querySelector('button.removeItemButton')
 
-
+removeItemButton.addEventListener ('click', () => {
+	let listTwo = document.getElementById('listTwo');
+	let li = document.querySelector('#listTwo li:last-child');
+	listTwo.removeChild(li);
+});
 
 
 
