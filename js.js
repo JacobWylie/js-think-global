@@ -66,17 +66,31 @@ for (let i = 0; i < evens.length; i += 1) {
 
 
 // ***************************************
-     // textContent
+     // textContent & innerHTML
 // ****************************************
 
+const toggleList = document.getElementById('toggleList')
+const listDiv = document.querySelector('.listDiv');
 const input = document.querySelector('input.description');
 const p = document.querySelector('p.description');
 const button = document.querySelector('button.description');
+
+toggleList.addEventListener ('click', () => {
+	if (listDiv.style.display == 'none') {
+		toggleList.innerHTML = 'Hide Lower List';
+		listDiv.style.display = 'block';
+	} else {
+	toggleList.innerHTML = 'Show Lower List';
+	listDiv.style.display = 'none';
+	}
+});
 
 button.addEventListener('click', () => {
 	// p.textContent = input.value + ':';
 	p.innerHTML = input.value + ':';
 });
+
+
 
 
 
