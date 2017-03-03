@@ -67,6 +67,9 @@ p + button {
 .list button + button {
   background: #768da3;
 }
+.remove {
+  background: #768da3;  
+}
 .list li button + button {
   background: #508abc;
 }
