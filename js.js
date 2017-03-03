@@ -93,16 +93,43 @@ descriptionButton.addEventListener('click', () => {
 
 
 // ***************************************
-     // Create New Elements & Add Nodes to DOM
+     // Create New Elements & Add Nodes to DOM & node.children
 // ****************************************
 
 const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
+const listTwo = document.getElementById('listTwo');
+const existingListItems = listTwo.children;
+const firstListItem = listTwo.firstElementChild;
+const lastListItem = listTwo.lastElementChild;
+
+firstListItem.style.backgroundColor = 'lightskyblue';
+lastListItem.style.backgroundColor = 'lightsteelblue';
+
+function attachListItemButton (li) {
+	let up = document.createElement('button');
+	up.className = 'up';
+	up.textContent = 'Up';
+	li.appendChild(up);
+	let down = document.createElement('button');
+	down.className = 'down';
+	down.textContent = 'Down';
+	li.appendChild(down);
+	let remove = document.createElement('button');
+	remove.className = 'remove';
+	remove.textContent = 'Remove';
+	li.appendChild(remove);
+};
+
+for (let i = 0; i < existingListItems.length; i += 1) {
+	attachListItemButton(existingListItems[i]);
+}
 
 addItemButton.addEventListener ('click', () => {
 	let listTwo = document.getElementById('listTwo');
 	let li = document.createElement('li');
-	li.innerHTML = addItemInput.value + '<button class="up">Up</button><button class="remove">Remove</button>';
+	li.innerHTML = addItemInput.value;
+	attachListItemButton(li);
 	listTwo.appendChild(li);
 	addItemInput.value = '';
 });
@@ -192,6 +219,10 @@ listTwo.addEventListener('click', (event) => {
 		}
 	}
 });
+
+
+
+
 
 
 
